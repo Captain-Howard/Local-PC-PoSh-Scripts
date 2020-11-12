@@ -4,7 +4,7 @@
 .DESCRIPTION
   For some reason Teams has been having issues with too much information building up in the cache lately... This clears all Teams cache locations. 
 .NOTES
-  Version:        1.0
+  Version:        1.5
   Author:         Captain Howard
   Creation Date:  12/18/19
   Purpose/Change: Production 
@@ -16,7 +16,9 @@ $list_of_filepaths = @()
 #Step 1: Close Teams
 Stop-Process -ProcessName Teams
 
-#Step 2-3: Finding folders and deleting files
+#Step 2: Depricated
+
+#Step 3: Finding folders and deleting files
 #Step 3 a) Application Cache
 $list_of_filepaths += "$Env:USERPROFILE\AppData\Roaming\Microsoft\Teams\application cache\cache"
 #Step 3 b) Blob_storage Cache
